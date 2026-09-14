@@ -1,9 +1,8 @@
 class MacosWireguardDaemon < Formula
-  desc "macOS WireGuard daemon"
+  desc "Daemon for running WireGuard VPN tunnels on macOS"
   homepage "https://github.com/pansen/macos-wireguard-daemon"
   url "https://github.com/pansen/macos-wireguard-daemon/releases/download/0.0.7/wgd-0.0.7-aarch64-apple-darwin.tar.gz"
-  sha256 "a24e4d98d2022cd62f5b43a76adb7475d9760901cd4ae23a899d9a74673494b8"
-  version "__VERSION__"
+  sha256 "5980358f42f7e04e1e0b58887d7b7405cc9afb1946f7a6f70fe1d32d70f99769"
   license "MIT"
 
   depends_on arch: :arm64
