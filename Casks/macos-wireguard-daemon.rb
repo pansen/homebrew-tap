@@ -1,21 +1,20 @@
 cask "macos-wireguard-daemon" do
-  version "0.0.8"
-  sha256 "c2017eb3ca1cee1b291167ec18df686e4b129ee9cb006cc24ad0b6c0b47e66e8"
+  version "0.0.9"
+  sha256 "ed360a74d706cfa888ae083cae7de5333e28836c58a5380436bb3b963b4ceb43"
 
-  url "https://github.com/pansen/macos-wireguard-daemon/releases/download/0.0.8/wgd-0.0.8-aarch64-apple-darwin.tar.gz"
+  url "https://github.com/pansen/macos-wireguard-daemon/releases/download/#{version}/wgd-#{version}-aarch64-apple-darwin.tar.gz"
   name "macOS WireGuard Daemon"
-  desc "Daemon for running WireGuard VPN tunnels on macOS"
+  desc "Daemon for running WireGuard VPN tunnels"
   homepage "https://github.com/pansen/macos-wireguard-daemon"
 
   depends_on arch: :arm64
 
-  binary "wgd-0.0.8-aarch64-apple-darwin/wgd", target: "wgd"
-
   installer script: {
-    executable: "wgd-0.0.8-aarch64-apple-darwin/wgd",
+    executable: "wgd-0.0.9-aarch64-apple-darwin/wgd",
     args:       ["launchd", "install"],
     sudo:       true,
   }
+  binary "wgd-0.0.9-aarch64-apple-darwin/wgd", target: "wgd"
 
   uninstall script: {
     executable:   "/usr/local/bin/wgd",
@@ -31,8 +30,8 @@ cask "macos-wireguard-daemon" do
         sudo:         true,
       },
       delete: [
-        "/usr/local/bin/wgd",
         "/Library/Application Support/wgd",
+        "/usr/local/bin/wgd",
         "/var/log/wgd",
       ]
 
