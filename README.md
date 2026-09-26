@@ -15,14 +15,14 @@ brew "<formula>"
 
 ## Formulae
 
-### scripts
+### agent-scripts
 
 Wrappers that run AI coding agents (Claude Code, Codex, opencode, Antigravity)
 inside the [nono](https://nono.sh) sandbox. Source:
-[pansen/scripts](https://github.com/pansen/scripts). Apple Silicon only.
+[pansen/agent-scripts](https://github.com/pansen/agent-scripts). Apple Silicon only.
 
 ```sh
-brew install pansen/tap/scripts
+brew install pansen/tap/agent-scripts
 ```
 
 ## Documentation
