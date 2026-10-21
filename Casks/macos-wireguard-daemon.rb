@@ -1,6 +1,6 @@
 cask "macos-wireguard-daemon" do
-  version "0.0.20"
-  sha256 "2504ccbd617519819f5f22b02ca08015e7640fee91ad8b710dbe325c9ff976a4"
+  version "0.1.0"
+  sha256 "b84a85574874eb7021ea17c763d7027c2cae99fbb5043ed18a0016f61abaf4b2"
 
   url "https://github.com/pansen/macos-wireguard-daemon/releases/download/v#{version}/wgd-#{version}-aarch64-apple-darwin.dmg"
   name "macOS WireGuard Daemon"
@@ -23,9 +23,13 @@ cask "macos-wireguard-daemon" do
     must_succeed: false,
   }
 
+  # `launchd purge` also restores DNS a crashed helper left behind and
+  # removes the authorization right and the session agent, which a plain
+  # delete list cannot do. The directories stay listed as a fallback in case
+  # purge fails.
   zap script: {
-        executable:   "/usr/sbin/dseditgroup",
-        args:         ["-o", "delete", "wgd"],
+        executable:   "/usr/local/bin/wgd",
+        args:         ["launchd", "purge"],
         must_succeed: false,
         sudo:         true,
       },
