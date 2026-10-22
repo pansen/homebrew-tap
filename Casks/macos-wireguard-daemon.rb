@@ -1,6 +1,6 @@
 cask "macos-wireguard-daemon" do
   version "0.1.5"
-  sha256 "d5e14b1f73d66873435b455d1acaa8a050d57ce85a043af24625ffe007272763"
+  sha256 "d97ebfc4bb1c1491c303d18482531b95367b9d4c46f97845a660266282db15c5"
 
   url "https://github.com/pansen/macos-wireguard-daemon/releases/download/v#{version}/wgd-#{version}-aarch64-apple-darwin.dmg"
   name "macOS WireGuard Daemon"
