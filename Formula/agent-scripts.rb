@@ -1,8 +1,8 @@
 class AgentScripts < Formula
   desc "Wrappers that run AI coding agents inside the nono sandbox"
   homepage "https://github.com/pansen/agent-scripts"
-  url "https://github.com/pansen/agent-scripts/archive/refs/tags/v2026.10.17.1414.tar.gz"
-  sha256 "bf262235b3ba97f69ead6822140ae0aea0e3fd1ef1159afa6de96957f0b3b5a3"
+  url "https://github.com/pansen/agent-scripts/archive/refs/tags/v2026.10.31.0603.tar.gz"
+  sha256 "d892df84bc9b5a763de2c0462c094449ea7ffd37900c238fb30b3c68ebebaa45"
   license "MIT"
   head "https://github.com/pansen/agent-scripts.git", branch: "main"
 
